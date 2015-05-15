@@ -7,7 +7,10 @@ from flask_mail import Mail,Message
 from config import config, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
-import datetime
+import datetime, json
+from pprint import pprint
+from collections import Counter
+import re, datetime
  
 import logging
 from logging.handlers import SMTPHandler
@@ -46,7 +49,26 @@ def page_not_found(e):
 
 @app.route('/')
 def screen():
-	return render_template('index.html')
+	with open('sample.json') as data_file:
+		data = json.load(data_file)
+	result = data["result"]["bugs"]
+	no_of_bugs = len(result)
+	assignedTo = []
+	severity = []
+	qaContacts = []
+	bugTimeline = []
+	for objects in result:
+		assignedTo.append(objects["assigned_to"])
+		qaContacts.append(objects["qa_contact"])
+		severity.append(objects["severity"])
+		temp = []
+		temp.append(objects["id"])
+		temp.append(datetime.datetime(*map(int, re.split('[^\d]', objects["creation_time"])[:-1])))
+		bugTimeline.append(temp)
+	noOfPeopleAssigned = len(list(set(assignedTo)))
+	noOfQAContacts = len(list(set(qaContacts)))
+	severityList = list(Counter(severity).items())
+	return render_template('index.html', noOfBugs=no_of_bugs, noOfPeopleAssigned=noOfPeopleAssigned, bugIds=bugTimeline, severityList=severityList, noOfQAContacts=noOfQAContacts)
 
 @app.teardown_appcontext
 def close_db():

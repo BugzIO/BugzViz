@@ -11,19 +11,85 @@
 	<section class="content-header">
 	</section>
   <section class="content">
-   <div class="row">
-    <div class="col-lg-3">
+    <div class="row">
+      <div class="col-lg-3">
       <div class="small-box bg-aqua">
-        <div class="inner">
-          <h3>Quantity / %</h3>
-          <p>Display important data statistics here</p>
-        </div>
-        <div class="icon">
-          <i class="ion ion-bag"></i>
+      <div class="inner">
+      <h3>{{noOfBugs}}</h3>
+      <p>Total bugs</p>
+      </div>
+      <div class="icon">
+      <i class="ion ion-bug"></i>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="small-box bg-green">
+          <div class="inner">
+            <h3>{{noOfPeopleAssigned}}</h3>
+            <p>No of people assigned</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-android-person"></i>
+          </div>
         </div>
       </div>
+      <div class="col-lg-3">
+        <div class="small-box bg-green">
+          <div class="inner">
+            <h3>{{noOfQAContacts}}</h3>
+            <p>QA Contacts assigned</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-android-person"></i>
+          </div>
+        </div>
+      </div>
+      {% for items in severityList %}
+        <div class="col-lg-3">
+          {% if items[0] == "high" %}
+          <div class="small-box bg-red">
+          {% elif items[0] == "urgent" %}
+          <div class="small-box bg-yellow">
+          {% elif items[0] == "medium" %}
+          <div class="small-box bg-purple">
+          {% elif items[0] == "low" %}
+          <div class="small-box bg-green">
+          {% else %}
+          <div class="small-box bg-orange">
+          {% endif %}
+            <div class="inner">
+              <h3>{{items[1]}}</h3>
+              <p>Severity: {{items[0]}} </p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-fork-repo"></i>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
     </div>
-  </div>
-</section>
+    <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Bug IDs</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body no-padding">
+                  <table class="table table-striped">
+                    <tbody><tr>
+                      <th style="width: 10px">#</th>
+                      <th>Bug Id</th>
+                      <th>Creation Date</th>
+                    </tr>
+                    {% for bug in bugIds %}
+                    <tr>
+                      <td>{{loop.index}}</td>
+                      <td>{{bug[0]}}</td>
+                      <td>{{bug[1]}}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody></table>
+                </div><!-- /.box-body -->
+              </div>
+  </section>
 </div>
 {% endblock %}

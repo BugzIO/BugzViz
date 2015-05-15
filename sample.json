@@ -1,0 +1,3637 @@
+{  
+    "error":null,
+    "id":"https://bugzilla.redhat.com/",
+    "result":{  
+        "bugs":[  
+            {  
+                "priority":"low",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:26Z",
+                "blocks":[  
+
+                ],
+                "creator":"Sean Flanigan",
+                "last_change_time":"2014-07-17T06:39:26Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "Michelle Kim",
+                    "Patrick Huang",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":831479,
+                "creation_time":"2012-06-13T05:50:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"1",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"500 internal error when REST client specifies invalid extensions",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"low",
+                "cf_environment":"",
+                "version":[  
+                    "1.6"
+                ],
+                "component":[  
+                    "Component-Logic"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"git-server-3.3.1-187-g25485bd",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:37Z",
+                "blocks":[  
+
+                ],
+                "creator":"Einav Cohen",
+                "last_change_time":"2014-07-17T06:39:37Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+                    "FutureFeature"
+                ],
+                "cc":[  
+                    "Carlos Munoz",
+                    "David Mason",
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "Michelle Kim",
+                    "Sean Flanigan",
+                    "Yuko Katabami",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1100092"
+                ],
+                "id":882770,
+                "creation_time":"2012-12-03T05:00:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"13",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Enhancement",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"RFE: Filter translation units by multiple fields in the editor.",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "2.0"
+                ],
+                "component":[  
+                    "WebSite"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.1-340-g5c34892)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:30Z",
+                "blocks":[  
+
+                ],
+                "creator":"Damian Jansen",
+                "last_change_time":"2014-07-17T06:39:30Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Sean Flanigan",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Damian Jansen",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":981085,
+                "creation_time":"2013-07-04T01:40:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"0",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"All",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"User not aware they can use underscores in username",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"All",
+                "severity":"low",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Usability"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.1-266-g186898a)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:35Z",
+                "blocks":[  
+                    1088122
+                ],
+                "creator":"Matthew Casperson",
+                "last_change_time":"2014-08-04T22:27:35Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Carlos Munoz",
+                    "Chris Bredesen",
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "Michelle Kim",
+                    "Patrick Huang",
+                    "Sean Flanigan"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1018633"
+                ],
+                "id":988202,
+                "creation_time":"2013-07-25T05:49:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+                    986741
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"5",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"RFE: REST API rate limiting",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "unspecified"
+                ],
+                "component":[  
+                    "Component-API"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.1-197-g24ab6b8)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:31Z",
+                "blocks":[  
+
+                ],
+                "creator":"Damian Jansen",
+                "last_change_time":"2014-07-17T06:39:31Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Patrick Huang",
+                    "Sean Flanigan",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1063562",
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1066203"
+                ],
+                "id":1002378,
+                "creation_time":"2013-08-29T04:24:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"RFE: Introduce a modular translation structure, and gwt generate the *Messages.properties files",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "3.0"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"git-aa31fd676205c4ad428e213cef2dd26030d63f56",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"low",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:28Z",
+                "blocks":[  
+
+                ],
+                "creator":"Ding-Yi Chen",
+                "last_change_time":"2014-07-17T06:39:28Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "David O'Brien",
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Ding-Yi Chen",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1025645,
+                "creation_time":"2013-11-01T07:33:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"0",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Both GPL and LGPL license files are required for LGPLv2+ project",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"low",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Component-Docs"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:47Z",
+                "blocks":[  
+
+                ],
+                "creator":"Isaac Rooskov",
+                "last_change_time":"2014-11-19T05:32:10Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Carlos Munoz",
+                    "Damian Jansen",
+                    "Francesco Valente",
+                    "Patrick Huang",
+                    "Sean Flanigan",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=968619"
+                ],
+                "id":1033375,
+                "creation_time":"2013-11-22T00:45:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Copy and Paste does not work when typing Italian in msgstr",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"unspecified",
+                "cf_environment":"",
+                "version":[  
+                    "3.0"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.2.3 (20140120-0038)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:25Z",
+                "blocks":[  
+
+                ],
+                "creator":"Ding-Yi Chen",
+                "last_change_time":"2014-07-17T06:39:25Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Damian Jansen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1043720,
+                "creation_time":"2013-12-17T00:51:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"The project search field failed to found existing project using the project name",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"urgent",
+                "cf_environment":"",
+                "version":[  
+                    "3.1"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (20140227-1220)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"medium",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:34Z",
+                "blocks":[  
+                    1088122
+                ],
+                "creator":"Leticia",
+                "last_change_time":"2014-07-17T06:39:34Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "croe@redhat.com",
+                    "David Mason",
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "Leticia",
+                    "Sean Flanigan",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1024130"
+                ],
+                "id":1062508,
+                "creation_time":"2014-02-07T06:16:00Z",
+                "whiteboard":"",
+                "qa_contact":"Ding-Yi Chen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"3",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Spell check changes are not saved after replacement",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "unspecified"
+                ],
+                "component":[  
+                    "Usability"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"git-server-3.3.1-257-gb0acc77",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:33Z",
+                "blocks":[  
+
+                ],
+                "creator":"David Mason",
+                "last_change_time":"2014-07-17T06:39:33Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "Sean Flanigan",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"David Mason",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1060628"
+                ],
+                "id":1065790,
+                "creation_time":"2014-02-17T00:54:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Admin manage search no longer shows time estimates",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (20140228-1142)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"high",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:31Z",
+                "blocks":[  
+
+                ],
+                "creator":"Carlos Munoz",
+                "last_change_time":"2014-07-17T06:39:31Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Damian Jansen",
+                    "Sean Flanigan",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Carlos Munoz",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1066701,
+                "creation_time":"2014-02-18T22:53:00Z",
+                "whiteboard":"",
+                "qa_contact":"Ding-Yi Chen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"3",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"RFE: As a Zanata user, I would like to be able to bookmark language and project selections in the groups page.",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "unspecified"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"git-c1c04a2aed32c60c9ca71e137bd177adf68222b3",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:33Z",
+                "blocks":[  
+                    1088122
+                ],
+                "creator":"David Mason",
+                "last_change_time":"2014-07-17T06:39:33Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Carlos Munoz",
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Carlos Munoz",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=947848"
+                ],
+                "id":1066756,
+                "creation_time":"2014-02-19T04:34:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"5",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"RFE: Merge user settings pages into dashboard",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.1-183-g13e6573)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:42Z",
+                "blocks":[  
+                    1027490
+                ],
+                "creator":"Carlos Munoz",
+                "last_change_time":"2014-07-17T06:39:42Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "Luke Brooker",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=961182"
+                ],
+                "id":1066796,
+                "creation_time":"2014-02-19T06:53:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"13",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"RFE: Implement new project page.",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "3.3"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.1-111-gaafa242)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:36Z",
+                "blocks":[  
+                    1088122
+                ],
+                "creator":"Carlos Munoz",
+                "last_change_time":"2014-07-17T06:39:36Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Carlos Munoz",
+                    "David Mason",
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "Sean Flanigan",
+                    "Yuko Katabami",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1076995"
+                ],
+                "id":1077439,
+                "creation_time":"2014-03-18T02:47:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"8",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"RFE: Use lucene indexes to do Copy Trans.",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "3.3"
+                ],
+                "component":[  
+                    "Component-CopyTrans"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.1-244-gcebf76a)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:41Z",
+                "blocks":[  
+
+                ],
+                "creator":"Damian Jansen",
+                "last_change_time":"2014-07-17T06:39:41Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Carlos Munoz",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1080770,
+                "creation_time":"2014-03-26T06:14:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Empty group \"Add Project\" button on languages tab doesn't work",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.1-268-g2d961af)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:49Z",
+                "blocks":[  
+
+                ],
+                "creator":"Damian Jansen",
+                "last_change_time":"2014-07-17T06:39:49Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1086036,
+                "creation_time":"2014-04-10T00:41:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Project / version language listing and inheritance issues",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Component-Logic"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"git-server-3.3.1-140-g0323f24",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:29Z",
+                "blocks":[  
+
+                ],
+                "creator":"Carlos Munoz",
+                "last_change_time":"2014-07-17T06:39:29Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "Patrick Huang",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1088122,
+                "creation_time":"2014-04-16T05:38:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+                    988202,
+                    1062508,
+                    1066756,
+                    1077439,
+                    1094090,
+                    1094106,
+                    1096564,
+                    1097470,
+                    1098924,
+                    1099278,
+                    1099349,
+                    1099362,
+                    1099400,
+                    1100079,
+                    1100092,
+                    1100131,
+                    1109653
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"13",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Release Zanata 3.4 to production",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "WebSite"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:31Z",
+                "blocks":[  
+
+                ],
+                "creator":"Damian Jansen",
+                "last_change_time":"2014-07-17T06:39:31Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Ding-Yi Chen",
+                    "Sean Flanigan",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1088651,
+                "creation_time":"2014-04-16T23:42:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"New About tab does not handle existing project Seam text",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"git-51427f2d7cd849f02c0183e5d38c19dc93b74628",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"high",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:51Z",
+                "blocks":[  
+                    1030166
+                ],
+                "creator":"David Mason",
+                "last_change_time":"2014-07-17T06:39:51Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1088737,
+                "creation_time":"2014-04-17T05:31:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Project type for a version is null after creation if the project type setting is not touched.",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Usability"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:51Z",
+                "blocks":[  
+
+                ],
+                "creator":"Damian Jansen",
+                "last_change_time":"2014-07-17T06:39:51Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1094071,
+                "creation_time":"2014-05-04T23:03:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"0",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Copy Translations information not correct",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.1-263-gd412540)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"high",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:29Z",
+                "blocks":[  
+                    1088122
+                ],
+                "creator":"Damian Jansen",
+                "last_change_time":"2014-07-17T06:39:29Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1094090,
+                "creation_time":"2014-05-05T03:58:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"[Regression] TMX import/export blocked by api not providing user key",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Component-API"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.1-266-ga1bc59b)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:39Z",
+                "blocks":[  
+
+                ],
+                "creator":"Alex Eng",
+                "last_change_time":"2014-07-17T06:39:39Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1094100,
+                "creation_time":"2014-05-05T05:33:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"RFE: As a user, I would like to be able to bookmark language and document selections on version page",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Usability"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.1-286-g3ee104f)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:45Z",
+                "blocks":[  
+                    1088122
+                ],
+                "creator":"Alex Eng",
+                "last_change_time":"2014-07-17T06:39:45Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1094106,
+                "creation_time":"2014-05-05T05:47:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"RFE: As project maintainer, I would like to select copyTrans option before running it",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Component-CopyTrans"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"git-server-3.3.1-254-g25790e4",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:44Z",
+                "blocks":[  
+                    1088122
+                ],
+                "creator":"Damian Jansen",
+                "last_change_time":"2014-07-17T06:39:44Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1096564,
+                "creation_time":"2014-05-12T03:52:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Entering garbage at the end of a projects url breaks navigation",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"urgent",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:48Z",
+                "blocks":[  
+
+                ],
+                "creator":"Alex Eng",
+                "last_change_time":"2014-07-17T06:39:48Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1097940,
+                "creation_time":"2014-05-14T22:28:00Z",
+                "whiteboard":"",
+                "qa_contact":"Ding-Yi Chen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"New password field should have show/hide toggle",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"urgent",
+                "cf_environment":"",
+                "version":[  
+                    "3.3"
+                ],
+                "component":[  
+                    "Security"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"git-server-3.3.2-341-g8801c79",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:52Z",
+                "blocks":[  
+
+                ],
+                "creator":"Damian Jansen",
+                "last_change_time":"2014-07-17T06:39:52Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1098003,
+                "creation_time":"2014-05-15T04:44:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+                    1098924
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Missing string for group request email notification sent",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "development"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:28Z",
+                "blocks":[  
+
+                ],
+                "creator":"David Mason",
+                "last_change_time":"2014-07-17T06:39:28Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Ding-Yi Chen",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1098371,
+                "creation_time":"2014-05-16T02:25:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Sort options in language and document lists on the version page do not take effect until a search is performed on the list",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.2-345-ge34c708)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"urgent",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:50Z",
+                "blocks":[  
+                    1088122,
+                    1098003
+                ],
+                "creator":"David Mason",
+                "last_change_time":"2014-07-17T06:39:50Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Ding-Yi Chen",
+                    "Sean Flanigan",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1098924,
+                "creation_time":"2014-05-19T07:54:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Copy Translations copies translations that should not be copied",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"urgent",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Component-Logic"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.0-SNAPSHOT (git-server-3.3.2-351-gdebfc4e)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"high",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:42Z",
+                "blocks":[  
+                    1088122,
+                    1099349
+                ],
+                "creator":"Ding-Yi Chen",
+                "last_change_time":"2014-07-17T06:39:42Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1099400,
+                "creation_time":"2014-05-20T08:40:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"[Regression] Failed to  upload translation via JSF",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Component-Persistence"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.1-SNAPSHOT (git-server-3.4.0-3-g74281e1)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:39Z",
+                "blocks":[  
+                    1088122
+                ],
+                "creator":"Damian Jansen",
+                "last_change_time":"2014-07-17T06:39:39Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1100079,
+                "creation_time":"2014-05-22T00:19:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Activity containing tags causes a broken dashboard",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "3.3"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.1-SNAPSHOT (git-server-3.4.0-7-ga8f02f0)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:47Z",
+                "blocks":[  
+                    1088122
+                ],
+                "creator":"Patrick Huang",
+                "last_change_time":"2014-07-17T06:39:47Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=882770"
+                ],
+                "id":1100092,
+                "creation_time":"2014-05-22T02:08:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Filter translation units by multiple fields in the editor should use ISO 8601 date format",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"unspecified",
+                "cf_environment":"",
+                "version":[  
+                    "3.3"
+                ],
+                "component":[  
+                    "Usability"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.1-SNAPSHOT (git-server-3.4.0-14-g94d1408)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:49Z",
+                "blocks":[  
+                    1088122
+                ],
+                "creator":"Patrick Huang",
+                "last_change_time":"2014-07-17T06:39:49Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Damian Jansen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1100131,
+                "creation_time":"2014-05-22T04:54:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"[webTran] filter translation by last modified date returns wrong result",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"unspecified",
+                "cf_environment":"",
+                "version":[  
+                    "3.3"
+                ],
+                "component":[  
+                    "Component-Logic"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.1-SNAPSHOT (git-server-3.4.0-18-g1791fc9)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-31T06:42:27Z",
+                "blocks":[  
+
+                ],
+                "creator":"Yuko Katabami",
+                "last_change_time":"2014-07-31T06:43:13Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Damian Jansen",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1120016"
+                ],
+                "id":1101332,
+                "creation_time":"2014-05-26T23:50:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"WORKSFORME",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"[OpenID] Fedora  authentication failed to redirect back to translate.zanata.org sometimes",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "3.3"
+                ],
+                "component":[  
+                    "Authentication-Fedora"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.3-SNAPSHOT (git-jenkins-zanata-server-github-pull-requests-1814)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"urgent",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:32Z",
+                "blocks":[  
+
+                ],
+                "creator":"Yuko Katabami",
+                "last_change_time":"2014-07-28T02:18:45Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Carlos Munoz",
+                    "Ding-Yi Chen",
+                    "Parag",
+                    "Akira TAGOH",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1102964,
+                "creation_time":"2014-05-29T23:24:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"CopyTrans takes excessively long hours to complete copying translations",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "3.3"
+                ],
+                "component":[  
+                    "Component-CopyTrans"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.2-SNAPSHOT (git-server-3.4.1-47-g88e8fe3)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:30Z",
+                "blocks":[  
+
+                ],
+                "creator":"Alex Eng",
+                "last_change_time":"2014-08-27T01:52:59Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "Sean Flanigan",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1123143"
+                ],
+                "id":1103538,
+                "creation_time":"2014-06-01T21:02:00Z",
+                "whiteboard":"",
+                "qa_contact":"Ding-Yi Chen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Exception thrown from Translate.zanata.org",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "3.3"
+                ],
+                "component":[  
+                    "Authentication-OpenID"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.5.0-SNAPSHOT (git-server-3.4.1-67-g5204cc5)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:33Z",
+                "blocks":[  
+
+                ],
+                "creator":"Alex Eng",
+                "last_change_time":"2014-07-17T06:39:33Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1103930,
+                "creation_time":"2014-06-02T22:54:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Noticeable delay on right column when selection are made on left column (ui design)",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"unspecified",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.2-SNAPSHOT (git-server-3.4.1-3-gd513dcb)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:41Z",
+                "blocks":[  
+
+                ],
+                "creator":"Patrick Huang",
+                "last_change_time":"2014-07-17T06:39:41Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Damian Jansen",
+                    "Isaac Rooskov",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1103940,
+                "creation_time":"2014-06-03T00:12:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Linux",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"---",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Remove info level notification popup from the editor",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"low",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Usability"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.2-SNAPSHOT (git-server-3.4.1-9-g6f301fb)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:45Z",
+                "blocks":[  
+
+                ],
+                "creator":"Ding-Yi Chen",
+                "last_change_time":"2014-07-17T06:39:45Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1103947,
+                "creation_time":"2014-06-03T00:57:00Z",
+                "whiteboard":"",
+                "qa_contact":"Ding-Yi Chen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"[Translation Editor] Dialog \"Invalid translation\" failed to obtain input focus.",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.2-SNAPSHOT (git-server-3.4.1-16-gcaeed7b)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"high",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:38Z",
+                "blocks":[  
+
+                ],
+                "creator":"Patrick Huang",
+                "last_change_time":"2014-07-17T06:39:38Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"https://translate.zanata.org",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1107882,
+                "creation_time":"2014-06-10T23:42:00Z",
+                "whiteboard":"",
+                "qa_contact":"Ding-Yi Chen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"translate.zanata.org admin manage users screen can not be loaded",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"unspecified",
+                "cf_environment":"",
+                "version":[  
+                    "3.3"
+                ],
+                "component":[  
+                    "Performance"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.2-SNAPSHOT (git-server-3.4.1-11-gd9676de)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"low",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:43Z",
+                "blocks":[  
+
+                ],
+                "creator":"Carlos Munoz",
+                "last_change_time":"2014-07-17T06:39:43Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1109611,
+                "creation_time":"2014-06-15T23:20:00Z",
+                "whiteboard":"",
+                "qa_contact":"Ding-Yi Chen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Version drop down with quick actions not shown on Project page.",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.2-SNAPSHOT (git-server-3.4.1-18-g768e717)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:46Z",
+                "blocks":[  
+                    1088122
+                ],
+                "creator":"Ding-Yi Chen",
+                "last_change_time":"2014-07-17T06:39:46Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Alex Eng",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1109653,
+                "creation_time":"2014-06-16T04:06:00Z",
+                "whiteboard":"",
+                "qa_contact":"Ding-Yi Chen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"[Project Version] Failed to load language list for source file name that contains space \" \"",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Component-UI"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.2-SNAPSHOT (git-server-3.4.1-25-g99811003)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2015-01-22T05:34:40Z",
+                "blocks":[  
+
+                ],
+                "creator":"Patrick Huang",
+                "last_change_time":"2015-01-22T05:34:40Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1111012,
+                "creation_time":"2014-06-19T04:26:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Admin edit user will always edit first user regardless row",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"unspecified",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Component-Logic"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.2-SNAPSHOT (git-server-3.4.1-32-g681e237)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-07-17T06:39:53Z",
+                "blocks":[  
+
+                ],
+                "creator":"Ding-Yi Chen",
+                "last_change_time":"2014-07-17T06:39:53Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "zanata-bugs"
+                ],
+                "url":"https://github.com/zanata/zanata-server/pull/507",
+                "assigned_to":"Sean Flanigan",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1111449,
+                "creation_time":"2014-06-20T04:59:00Z",
+                "whiteboard":"",
+                "qa_contact":"Zanata-QA Mailling List",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Hold active tasks in a map, but cache finished tasks briefly",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"high",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Performance"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.2-SNAPSHOT (git-server-3.4.1-50-gf1b0828)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-10-23T04:10:49Z",
+                "blocks":[  
+
+                ],
+                "creator":"Carlos Munoz",
+                "last_change_time":"2014-10-23T04:10:49Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Carlos Munoz",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1116169,
+                "creation_time":"2014-07-03T23:58:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"RFE: Ajax loading Feedback for the Version Group Page",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Usability"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.3-SNAPSHOT (git-jenkins-zanata-server-github-pull-requests-1773)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-10-23T04:27:09Z",
+                "blocks":[  
+
+                ],
+                "creator":"Damian Jansen",
+                "last_change_time":"2014-10-23T04:27:09Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Patrick Huang",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1116688,
+                "creation_time":"2014-07-07T03:56:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Test DB cleanup does not remove the role assignment rules",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"low",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Maintainability"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-10-23T04:10:20Z",
+                "blocks":[  
+
+                ],
+                "creator":"Ding-Yi Chen",
+                "last_change_time":"2014-10-23T04:10:20Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Damian Jansen",
+                    "zanata-bugs"
+                ],
+                "url":"https://github.com/zanata/zanata-server/pull/527",
+                "assigned_to":"Carlos Munoz",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1117095,
+                "creation_time":"2014-07-08T03:33:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Make sure csrf tokens match on client and serve",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "3.5"
+                ],
+                "component":[  
+                    "Component-Logic"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.3-SNAPSHOT (git-jenkins-zanata-server-github-pull-requests-1770)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-10-23T04:11:14Z",
+                "blocks":[  
+                    1120032
+                ],
+                "creator":"Michelle Kim",
+                "last_change_time":"2014-10-23T04:11:14Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Carlos Munoz",
+                    "Ding-Yi Chen",
+                    "Sean Flanigan",
+                    "zanata-bugs"
+                ],
+                "url":"https://github.com/zanata/zanata-server/pull/536",
+                "assigned_to":"Carlos Munoz",
+                "groups":[  
+
+                ],
+                "see_also":[  
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1098878",
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1101332",
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=1120704"
+                ],
+                "id":1120016,
+                "creation_time":"2014-07-16T05:10:00Z",
+                "whiteboard":"",
+                "qa_contact":"Ding-Yi Chen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"3",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"RFE: FAS-only authentication",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"medium",
+                "cf_environment":"",
+                "version":[  
+                    "unspecified"
+                ],
+                "component":[  
+                    "Authentication-Fedora"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.3-SNAPSHOT (git-jenkins-zanata-server-github-pull-requests-1814)",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            },
+            {  
+                "priority":"unspecified",
+                "cf_category":"---",
+                "cf_last_closed":"2014-10-23T04:10:34Z",
+                "blocks":[  
+
+                ],
+                "creator":"Alex Eng",
+                "last_change_time":"2014-10-23T04:10:34Z",
+                "is_cc_accessible":true,
+                "keywords":[  
+
+                ],
+                "cc":[  
+                    "Ding-Yi Chen",
+                    "Damian Jansen",
+                    "zanata-bugs"
+                ],
+                "url":"",
+                "assigned_to":"Alex Eng",
+                "groups":[  
+
+                ],
+                "see_also":[  
+
+                ],
+                "id":1130797,
+                "creation_time":"2014-08-17T21:11:00Z",
+                "whiteboard":"",
+                "qa_contact":"Damian Jansen",
+                "depends_on":[  
+
+                ],
+                "cf_regression_status":"---",
+                "dupe_of":null,
+                "docs_contact":"",
+                "cf_story_points":"---",
+                "resolution":"CURRENTRELEASE",
+                "classification":"Community",
+                "alias":[  
+
+                ],
+                "cf_doc_type":"Bug Fix",
+                "op_sys":"Unspecified",
+                "cf_crm":"",
+                "target_release":[  
+                    "3.4"
+                ],
+                "status":"CLOSED",
+                "cf_type":"Bug",
+                "cf_documentation_action":"---",
+                "cf_clone_of":null,
+                "summary":"Cache document statistic and overflow to disk",
+                "cf_mount_type":"---",
+                "is_open":false,
+                "platform":"Unspecified",
+                "severity":"unspecified",
+                "cf_environment":"",
+                "version":[  
+                    "3.4"
+                ],
+                "component":[  
+                    "Component-Persistence"
+                ],
+                "sub_components":{  
+
+                },
+                "cf_fixed_in":"3.4.3-SNAPSHOT (git-jenkins-zanata-server-github-pull-requests-1922",
+                "is_creator_accessible":true,
+                "product":"Zanata",
+                "target_milestone":"---",
+                "is_confirmed":true,
+                "cf_release_notes":"",
+                "cf_verified_branch":""
+            }
+        ]
+    }
+}
