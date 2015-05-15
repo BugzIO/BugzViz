@@ -68,7 +68,12 @@ def screen():
 	noOfPeopleAssigned = len(list(set(assignedTo)))
 	noOfQAContacts = len(list(set(qaContacts)))
 	severityList = list(Counter(severity).items())
-	return render_template('index.html', noOfBugs=no_of_bugs, noOfPeopleAssigned=noOfPeopleAssigned, bugIds=bugTimeline, severityList=severityList, noOfQAContacts=noOfQAContacts)
+	with open('redhatRepos.json') as data:
+		repoData = json.load(data)
+	repoResult = repoData.keys()
+	repoResult.sort()
+	noOfRepos = len(repoResult)
+	return render_template('index.html', noOfBugs=no_of_bugs, noOfPeopleAssigned=noOfPeopleAssigned, bugIds=bugTimeline, severityList=severityList, noOfQAContacts=noOfQAContacts, noOfRepos=noOfRepos, repoResult=repoResult)
 
 @app.teardown_appcontext
 def close_db():

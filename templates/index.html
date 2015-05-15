@@ -68,8 +68,21 @@
           </div>
         </div>
       {% endfor %}
+      <div class="col-lg-3">
+        <div class="small-box bg-green">
+          <div class="inner">
+            <h3>{{noOfRepos}}</h3>
+            <p>Total Code Repositories</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-code"></i>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="box">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Bug IDs</h3>
                 </div><!-- /.box-header -->
@@ -89,7 +102,30 @@
                     {% endfor %}
                   </tbody></table>
                 </div><!-- /.box-body -->
-              </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Bug IDs</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body no-padding">
+                  <table class="table table-striped">
+                    <tbody><tr>
+                      <th style="width: 10px">#</th>
+                      <th>Repository Name</th>
+                    </tr>
+                    {% for repo in repoResult %}
+                    <tr>
+                      <td>{{loop.index}}</td>
+                      <td>{{repo}}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody></table>
+                </div><!-- /.box-body -->
+        </div>
+      </div>
+    </div>
   </section>
 </div>
 {% endblock %}
