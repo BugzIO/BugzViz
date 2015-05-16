@@ -133,7 +133,7 @@
                 "target_release":[  
                     "3.4"
                 ],
-                "status":"CLOSED",
+                "status":"OPEN",
                 "cf_type":"Bug",
                 "cf_documentation_action":"---",
                 "cf_clone_of":null,
@@ -207,7 +207,7 @@
                 "target_release":[  
                     "3.4"
                 ],
-                "status":"CLOSED",
+                "status":"OPEN",
                 "cf_type":"Bug",
                 "cf_documentation_action":"---",
                 "cf_clone_of":null,
@@ -286,7 +286,7 @@
                 "target_release":[  
                     "3.4"
                 ],
-                "status":"CLOSED",
+                "status":"OPEN",
                 "cf_type":"Bug",
                 "cf_documentation_action":"---",
                 "cf_clone_of":null,
@@ -362,7 +362,7 @@
                 "target_release":[  
                     "3.4"
                 ],
-                "status":"CLOSED",
+                "status":"OPEN",
                 "cf_type":"Bug",
                 "cf_documentation_action":"---",
                 "cf_clone_of":null,
