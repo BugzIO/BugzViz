@@ -68,11 +68,46 @@
           </div>
         </div>
       {% endfor %}
+      {% for items in statusList %}
+        <div class="col-lg-3">
+          <div class="small-box bg-orange">
+            <div class="inner">
+              <h3>{{items[1]}}</h3>
+              <p>Bug Status: {{items[0]}} </p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-fork-repo"></i>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
       <div class="col-lg-3">
         <div class="small-box bg-green">
           <div class="inner">
             <h3>{{noOfRepos}}</h3>
             <p>Total Code Repositories</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-code"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="small-box bg-black">
+          <div class="inner">
+            <h3>{{noOfCCParticipants}}</h3>
+            <p>Total discussion participants</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-android-contacts" style="color:white;"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="small-box bg-blue">
+          <div class="inner">
+            <h3>{{noOfComponents}}</h3>
+            <p>Total components</p>
           </div>
           <div class="icon">
             <i class="ion ion-code"></i>

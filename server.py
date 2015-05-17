@@ -11,6 +11,9 @@ import datetime, json
 from pprint import pprint
 from collections import Counter
 import re, datetime
+import urllib2, urllib
+from bs4 import BeautifulSoup
+import requests
  
 import logging
 from logging.handlers import SMTPHandler
@@ -49,31 +52,49 @@ def page_not_found(e):
 
 @app.route('/')
 def screen():
-	with open('sample.json') as data_file:
-		data = json.load(data_file)
-	result = data["result"]["bugs"]
-	no_of_bugs = len(result)
+	redHatProductsList = [line.strip().replace(" ", "%20") for line in open('product/productRevised.txt')]
+	requestURLs = []
 	assignedTo = []
 	severity = []
 	qaContacts = []
 	bugTimeline = []
-	for objects in result:
-		assignedTo.append(objects["assigned_to"])
-		qaContacts.append(objects["qa_contact"])
-		severity.append(objects["severity"])
-		temp = []
-		temp.append(objects["id"])
-		temp.append(datetime.datetime(*map(int, re.split('[^\d]', objects["creation_time"])[:-1])))
-		bugTimeline.append(temp)
+	ccList = []
+	components = []
+	bugStatus = []
+	no_of_bugs = 0
+	for eachProduct in redHatProductsList:
+		print eachProduct + ' request Started'
+		filepath = 'product/data/'+eachProduct+'.json'
+		with open(filepath) as json_file:
+			data = json.load(json_file)
+		print eachProduct + ' Request Complete'
+		result = data["result"]["bugs"]
+		no_of_bugs += len(result)
+		for objects in result:
+			assignedTo.append(objects["assigned_to"])
+			qaContacts.append(objects["qa_contact"])
+			severity.append(objects["severity"])
+			bugStatus.append(objects["status"])
+			for members in objects["cc"]:
+				ccList.append(members)
+			for component in objects["component"]:
+				components.append(component)
+			temp = []
+			temp.append(objects["id"])
+			temp.append(datetime.datetime(*map(int, re.split('[^\d]', objects["creation_time"])[:-1])))
+			bugTimeline.append(temp)
 	noOfPeopleAssigned = len(list(set(assignedTo)))
 	noOfQAContacts = len(list(set(qaContacts)))
 	severityList = list(Counter(severity).items())
+	statusList = list(Counter(bugStatus).items())
 	with open('redhatRepos.json') as data:
 		repoData = json.load(data)
 	repoResult = repoData.keys()
 	repoResult.sort()
 	noOfRepos = len(repoResult)
-	return render_template('index.html', noOfBugs=no_of_bugs, noOfPeopleAssigned=noOfPeopleAssigned, bugIds=bugTimeline, severityList=severityList, noOfQAContacts=noOfQAContacts, noOfRepos=noOfRepos, repoResult=repoResult)
+	noOfCCParticipants = len(list(set(ccList)))
+	noOfComponents = len(list(set(components)))
+	return render_template('index.html', noOfBugs=no_of_bugs, noOfPeopleAssigned=noOfPeopleAssigned, bugIds=bugTimeline, severityList=severityList, noOfQAContacts=noOfQAContacts, noOfRepos=noOfRepos, repoResult=repoResult, noOfCCParticipants=noOfCCParticipants, noOfComponents=noOfComponents, statusList=statusList)
 
 @app.teardown_appcontext
 def close_db():
