@@ -1,0 +1,72 @@
+{
+  "result": {
+    "bugs": [
+      {
+        "cf_story_points": "---",
+        "creator": "Frank Hirtz",
+        "cc": [
+          "David Lawrence",
+          "Florian La Roche",
+          "Mark J. Cox (Product Security)",
+          "Issue Tracker"
+        ],
+        "depends_on": [],
+        "cf_regression_status": "---",
+        "creation_time": "2004-04-07T15:50:00Z",
+        "docs_contact": "",
+        "is_open": false,
+        "cf_mount_type": "---",
+        "keywords": [],
+        "target_release": [
+          "---"
+        ],
+        "id": 120285,
+        "cf_release_notes": "",
+        "op_sys": "Linux",
+        "classification": "Retired",
+        "is_confirmed": true,
+        "is_creator_accessible": true,
+        "cf_fixed_in": "",
+        "target_milestone": "---",
+        "priority": "high",
+        "platform": "All",
+        "version": [
+          "Aug"
+        ],
+        "severity": "medium",
+        "cf_environment": "",
+        "status": "CLOSED",
+        "product": "Feature Tracker",
+        "cf_verified_branch": "",
+        "blocks": [
+          132644
+        ],
+        "qa_contact": "",
+        "see_also": [],
+        "summary": "RHEL3 U4: Modify OpenSSH Server to (optionally) respond with patch level",
+        "component": [
+          "RHEL3_U4"
+        ],
+        "sub_components": {},
+        "cf_category": "---",
+        "cf_doc_type": "Bug Fix",
+        "groups": [],
+        "cf_documentation_action": "---",
+        "cf_clone_of": null,
+        "is_cc_accessible": true,
+        "cf_type": "---",
+        "url": "IT_30618, IT_48092",
+        "whiteboard": "OS",
+        "cf_crm": "",
+        "cf_last_closed": "2004-12-21T01:30:40Z",
+        "alias": [],
+        "dupe_of": null,
+        "assigned_to": "Nalin Dahyabhai",
+        "resolution": "ERRATA",
+        "last_change_time": "2008-08-25T16:25:22Z"
+      }
+    ]
+  },
+  "id": "https://bugzilla.redhat.com/",
+  "error": null
+}
