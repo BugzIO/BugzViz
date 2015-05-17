@@ -48,7 +48,7 @@ def get_cursor():
 
 @app.errorhandler(404)
 def page_not_found(e):
-	return render_template('404.html'), 404
+	return render_template('404.djt'), 404
 
 @app.route('/')
 def screen():
@@ -94,7 +94,7 @@ def screen():
 	noOfRepos = len(repoResult)
 	noOfCCParticipants = len(list(set(ccList)))
 	noOfComponents = len(list(set(components)))
-	return render_template('index.html', noOfBugs=no_of_bugs, noOfPeopleAssigned=noOfPeopleAssigned, bugIds=bugTimeline, severityList=severityList, noOfQAContacts=noOfQAContacts, noOfRepos=noOfRepos, repoResult=repoResult, noOfCCParticipants=noOfCCParticipants, noOfComponents=noOfComponents, statusList=statusList)
+	return render_template('index.djt', noOfBugs=no_of_bugs, noOfPeopleAssigned=noOfPeopleAssigned, bugIds=bugTimeline, severityList=severityList, noOfQAContacts=noOfQAContacts, noOfRepos=noOfRepos, repoResult=repoResult, noOfCCParticipants=noOfCCParticipants, noOfComponents=noOfComponents, statusList=statusList)
 
 @app.teardown_appcontext
 def close_db():

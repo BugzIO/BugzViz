@@ -1,4 +1,4 @@
-{% extends "header.html" %}
+{% extends "header.djt" %}
 {% block body %}
 <!-- DATA TABLES -->
 <link href="{{ url_for('static', filename='internal/plugins/datatables/dataTables.bootstrap.css') }}" rel="stylesheet" type="text/css" />

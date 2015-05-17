@@ -68,4 +68,4 @@
         <!-- /.sidebar -->
       </aside>
       {% block body %}{% endblock %}
-      {% extends "footer.html" %}
+      {% extends "footer.djt" %}
