@@ -50,6 +50,48 @@ def get_cursor():
 def page_not_found(e):
 	return render_template('404.djt'), 404
 
+@app.route('/leaderboard')
+def leaderboard():
+	redHatProductsList = [line.strip().replace(" ", "%20") for line in open('product/productRevised.txt')]
+	assignedTo = []
+	reportedBy = []
+	no_of_bugs = 0
+	for eachProduct in redHatProductsList:
+		print eachProduct + ' request Started'
+		filepath = 'product/data/'+eachProduct+'.json'
+		with open(filepath) as json_file:
+			data = json.load(json_file)
+		print eachProduct + ' Request Complete'
+		result = data["result"]["bugs"]
+		no_of_bugs += len(result)
+		for objects in result:
+			assignedTo.append(objects["assigned_to"])
+			reportedBy.append(objects["creator"])
+	AssignedList = list(Counter(assignedTo).most_common())
+	reporterList = list(Counter(reportedBy).most_common())
+	noOfAssignees = len(set(AssignedList))
+	noOfReporters = len(set(reporterList))
+	return render_template('leaderboard.djt', AssignedList=AssignedList, noOfAssignees=noOfAssignees, reporterList=reporterList, noOfReporters=noOfReporters, no_of_bugs=no_of_bugs)
+
+@app.route('/components')
+def components():
+	redHatProductsList = [line.strip().replace(" ", "%20") for line in open('product/productRevised.txt')]
+	components = []
+	for eachProduct in redHatProductsList:
+		print eachProduct + ' request Started'
+		filepath = 'product/data/'+eachProduct+'.json'
+		with open(filepath) as json_file:
+			data = json.load(json_file)
+		print eachProduct + ' Request Complete'
+		result = data["result"]["bugs"]
+		for objects in result:
+			for component in objects["component"]:
+				components.append(component)
+	noOfComponents = len(list(set(components)))
+	componentList = list(Counter(components).most_common())
+	colors = ['aqua','green','blue','yellow','purple','orange','red']
+	return render_template('components.djt', noOfComponents=noOfComponents, components=componentList, colors=colors)
+
 @app.route('/')
 def screen():
 	redHatProductsList = [line.strip().replace(" ", "%20") for line in open('product/productRevised.txt')]
@@ -94,6 +136,8 @@ def screen():
 	noOfRepos = len(repoResult)
 	noOfCCParticipants = len(list(set(ccList)))
 	noOfComponents = len(list(set(components)))
+	componentList = list(Counter(components).items())
+	print componentList
 	return render_template('index.djt', noOfBugs=no_of_bugs, noOfPeopleAssigned=noOfPeopleAssigned, bugIds=bugTimeline, severityList=severityList, noOfQAContacts=noOfQAContacts, noOfRepos=noOfRepos, repoResult=repoResult, noOfCCParticipants=noOfCCParticipants, noOfComponents=noOfComponents, statusList=statusList)
 
 @app.teardown_appcontext

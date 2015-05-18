@@ -63,6 +63,16 @@
                 <i class="fa fa-dashboard"></i> <span>Home</span>
               </a>
             </li>
+            <li class="active treeview">
+              <a href="/components">
+                <i class="fa fa-list"></i> <span>Components</span>
+              </a>
+            </li>
+            <li class="active treeview">
+              <a href="/leaderboard">
+                <i class="fa fa-line-chart"></i> <span>Leaderboard</span>
+              </a>
+            </li>
           </ul>
         </section>
         <!-- /.sidebar -->

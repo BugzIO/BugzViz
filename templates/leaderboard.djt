@@ -1,0 +1,90 @@
+{% extends "header.djt" %}
+{% block body %}
+<!-- DATA TABLES -->
+<link href="{{ url_for('static', filename='internal/plugins/datatables/dataTables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
+<!-- JQUERY -->
+<script src="{{ url_for('static', filename='internal/plugins/jQuery/jQuery-2.1.3.min.js') }}" type="text/javascript"></script>  
+<script src="{{ url_for('static', filename='internal/plugins/datatables/jquery.dataTables.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='internal/plugins/datatables/dataTables.bootstrap.js') }}" type="text/javascript"></script>
+<!-- END DATA TABLES LIBRARY -->
+<div class="content-wrapper" style="background-color:#DDDDDD;">
+	<section class="content-header">
+		<h1>Leaderboard - Meet the Rockstars</h1>
+		<h3>{{no_of_bugs}} Total Bugs reported all time.</h3>
+	</section>
+	<section class="content">
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+				<h1>Most Assigned to</h1>
+				<div class="box">
+	                <div class="box-header">
+	                  <h3 class="box-title">{{noOfAssignees}} people have been assigned to fix bugs till date</h3>
+	                </div><!-- /.box-header -->
+	                <div class="box-body no-padding">
+	                  <table class="table table-striped">
+	                    <tbody>
+	                    <tr>
+	                      <th style="width: 10px">#</th>
+	                      <th>Name</th>
+	                      <th>Percentage</th>
+	                      <th></th>
+	                      <th>Total bugs</th>
+	                    </tr>
+	                    {% for assigned in AssignedList %}
+	                    {% if assigned[0] != "" %}
+	                    <tr>
+	                      <th>{{loop.index-1}}</th>
+	                      <th>{{assigned[0]}}</th>
+	                      <td>
+                        <div class="progress progress-xs progress-striped active">
+                          <div class="progress-bar progress-bar-success" style="width: {{assigned[1]/no_of_bugs * 100|round(1, 'floor')}}%"></div>
+                        </div>
+                      </td>
+                      <td><span class="badge bg-green">{{'%0.2f'| format((assigned[1]/no_of_bugs * 100)|float)}}  %</span></td>
+	                      <th>{{assigned[1]}}</th>
+	                    </tr>
+	                    {% endif %}
+	                    {% endfor %}
+	                  </tbody></table>
+	                </div><!-- /.box-body -->
+              	</div>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<h1>Most Reported</h1>
+				<div class="box">
+	                <div class="box-header">
+	                  <h3 class="box-title">{{noOfReporters}} awesome people who have reported bugs</h3>
+	                </div><!-- /.box-header -->
+	                <div class="box-body no-padding">
+	                  <table class="table table-striped">
+	                    <tbody>
+	                    <tr>
+	                      <th style="width: 10px">#</th>
+	                      <th>Name</th>
+	                      <th>Percentage</th>
+	                      <th></th>
+	                      <th>Total bugs</th>
+	                    </tr>
+	                    {% for reporter in reporterList %}
+	                    {% if reporter[0] != "" %}
+	                    <tr>
+	                      <th>{{loop.index-1}}</th>
+	                      <th>{{reporter[0]}}</th>
+	                      <td>
+                        <div class="progress progress-xs progress-striped active">
+                          <div class="progress-bar progress-bar-success" style="width: {{reporter[1]/no_of_bugs * 100 | round(1, 'floor')}}%"></div>
+                        </div>
+                      </td>
+                      <td><span class="badge bg-green">{{'%0.2f'| format((reporter[1]/no_of_bugs * 100)|float)}}  %</span></td>
+	                      <th>{{reporter[1]}}</th>
+	                    </tr>
+	                    {% endif %}
+	                    {% endfor %}
+	                  </tbody></table>
+	                </div><!-- /.box-body -->
+              	</div>
+			</div>
+		</div>
+	</section>
+</div>
+{% endblock %}
