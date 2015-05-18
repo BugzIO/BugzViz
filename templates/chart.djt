@@ -1,0 +1,32 @@
+{% extends "header.djt" %}
+{% block body %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="ck/static/chartkick.js"></script>
+<div class="content-wrapper" style="background-color:white;">
+	<section class="content-header">
+	</section>
+	<section class="content">
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<h3>Bugs over the years</h3>
+				{% column_chart timeInfo %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-4">
+				<h3>Bug status across Redhat products</h3>
+				{% pie_chart statusData %}
+			</div>
+			<div class="col-lg-4 col-md-4">
+				<h3>Bugs filed in Month/Year</h3>
+				{% column_chart monthYearInfo %}
+			</div>
+			<div class="col-lg-4 col-md-4">
+				<h3>Bugs filed in Year</h3>
+				{% column_chart YearInfo %}
+			</div>
+		</div>
+	</section>
+</div>
+{% endblock %}

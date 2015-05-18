@@ -1,7 +1,7 @@
 # all the imports
 import os,binascii
 from flask import Flask, request, session, g, redirect, url_for, abort, \
-		render_template, flash
+		render_template, flash, Blueprint
 from flaskext.mysql import MySQL
 from flask_mail import Mail,Message
 from config import config, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
@@ -13,7 +13,7 @@ from collections import Counter
 import re, datetime
 import urllib2, urllib
 from bs4 import BeautifulSoup
-import requests
+import requests, chartkick
  
 import logging
 from logging.handlers import SMTPHandler
@@ -39,6 +39,9 @@ if MAIL_USERNAME or MAIL_PASSWORD:
 
 mysql.init_app(app)
 app.config.from_object(__name__)
+ck = Blueprint('ck_page', __name__, static_folder=chartkick.js(), static_url_path='/static')
+app.register_blueprint(ck, url_prefix='/ck')
+app.jinja_env.add_extension("chartkick.ext.charts")
 
 def tup2float(tup):
 	return float('.'.join(str(x) for x in tup))
@@ -49,6 +52,61 @@ def get_cursor():
 @app.errorhandler(404)
 def page_not_found(e):
 	return render_template('404.djt'), 404
+
+@app.route('/charts')
+def charts():
+	redHatProductsList = [line.strip().replace(" ", "%20") for line in open('product/productRevised.txt')]
+	createdTime = []
+	status = []
+	assignedTo = []
+	reportedBy = []
+	monthYear = []
+	Year = []
+	month = []
+	for eachProduct in redHatProductsList:
+		print eachProduct + ' request Started'
+		filepath = 'product/data/'+eachProduct+'.json'
+		with open(filepath) as json_file:
+			data = json.load(json_file)
+		print eachProduct + ' Request Complete'
+		result = data["result"]["bugs"]
+		for objects in result:
+			bugDateTime = datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%d/%Y')
+			createdTime.append(bugDateTime)
+			monthYear.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%Y'))
+			Year.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%Y'))
+			status.append(objects["status"])
+			assignedTo.append(objects["assigned_to"])
+			reportedBy.append(objects["creator"])
+	counterData = dict(list(Counter(createdTime).items()))
+	statusCount = dict(list(Counter(status).items()))
+	monthYearCount = dict(list(Counter(monthYear).items()))
+	YearCount = dict(list(Counter(Year).items()))
+	data = []
+	for key, value in statusCount.iteritems():
+		temp = []
+		temp.append(key.encode('ascii','ignore'))
+		temp.append(value)
+		data.append(temp)
+	timeInfo = []
+	for key, value in counterData.iteritems():
+		temp = []
+		temp.append(key.encode('ascii','ignore'))
+		temp.append(value)
+		timeInfo.append(temp)
+	monthYearInfo = []
+	for key, value in monthYearCount.iteritems():
+		temp = []
+		temp.append(key.encode('ascii','ignore'))
+		temp.append(value)
+		monthYearInfo.append(temp)
+	YearInfo = []
+	for key, value in YearCount.iteritems():
+		temp = []
+		temp.append(key.encode('ascii','ignore'))
+		temp.append(value)
+		YearInfo.append(temp)
+	return render_template('chart.djt', statusData = data, timeInfo=timeInfo, monthYearInfo=monthYearInfo, YearInfo=YearInfo)
 
 @app.route('/leaderboard')
 def leaderboard():
@@ -149,4 +207,4 @@ if __name__ == '__main__':
 	app.debug = True
 	app.secret_key=os.urandom(24)
 	# app.permanent_session_lifetime = datetime.timedelta(seconds=200)
-	app.run()
+	app.run(host='0.0.0.0', port=8080)
