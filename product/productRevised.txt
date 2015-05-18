@@ -101,6 +101,8 @@ Red Hat Enterprise IPA
 Red Hat Enterprise Linux 2.1
 Red Hat Enterprise Linux 3
 Red Hat Enterprise Linux 4
+Red Hat Enterprise Linux 7-p1
+Red Hat Enterprise Linux 7-p2
 Red Hat Enterprise Linux NEXT
 Red Hat Enterprise MRG
 Red Hat Enterprise oVirt Server Suite 1
