@@ -24,11 +24,17 @@ After doing all of the above steps successfully run the following commands
 1. `pip install -r requirements.txt`
 2. After successful installation of the requirements run `python server.py`
 
-The server should now be running on `localhost:5000`
+The server initially sets up all its required data sources and then is ready to serve them, It'll display a line saying
+```
+The server is now Online.
+ You can access the server at localhost:8080
+```
 
-To deploy the application to a live server do the following changes in the last line of `server.py`
+The server should now be running on `localhost:8080`
+
+To deploy the application to a live server do the following changes in the last line of `server.py` running as screen service.
 
 
 ```python
-app.run(host= '0.0.0.0')
+app.run(host= '0.0.0.0', port=80)
 ```
