@@ -43,6 +43,62 @@ ck = Blueprint('ck_page', __name__, static_folder=chartkick.js(), static_url_pat
 app.register_blueprint(ck, url_prefix='/ck')
 app.jinja_env.add_extension("chartkick.ext.charts")
 
+# Global Load lists
+redHatProductsList = [line.strip().replace(" ", "%20") for line in open('product/productRevised.txt')]
+createdTime = []
+status = []
+assignedTo = []
+reportedBy = []
+monthYear = []
+Year = []
+month = []
+assignedTo = []
+reportedBy = []
+platforms = []
+components = []
+no_of_bugs = 0
+requestURLs = []
+severity = []
+qaContacts = []
+bugTimeline = []
+ccList = []
+bugStatus = []
+
+print "Server is setting up, please wait... Querying the required information\n\n"
+for eachProduct in redHatProductsList:
+	print eachProduct + ' request Started'
+	filepath = 'product/data/'+eachProduct+'.json'
+	with open(filepath) as json_file:
+		data = json.load(json_file)
+	print eachProduct + ' Request Complete'
+	result = data["result"]["bugs"]
+	no_of_bugs += len(result)
+	for objects in result:
+		bugDateTime = datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%d/%Y')
+		createdTime.append(bugDateTime)
+		monthYear.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%Y'))
+		Year.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%Y'))
+		status.append(objects["status"])
+		assignedTo.append(objects["assigned_to"])
+		reportedBy.append(objects["creator"])
+		assignedTo.append(objects["assigned_to"])
+		reportedBy.append(objects["creator"])
+		platforms.append(objects["platform"])
+		for component in objects["component"]:
+			components.append(component)
+		qaContacts.append(objects["qa_contact"])
+		severity.append(objects["severity"])
+		bugStatus.append(objects["status"])
+		for members in objects["cc"]:
+			ccList.append(members)
+		for component in objects["component"]:
+			components.append(component)
+		temp = []
+		temp.append(objects["id"])
+		temp.append(datetime.datetime(*map(int, re.split('[^\d]', objects["creation_time"])[:-1])))
+		bugTimeline.append(temp)
+print "The server is now Online.\n You can access the server at localhost:8080"
+
 def tup2float(tup):
 	return float('.'.join(str(x) for x in tup))
 
@@ -55,35 +111,6 @@ def page_not_found(e):
 
 @app.route('/charts')
 def charts():
-	redHatProductsList = [line.strip().replace(" ", "%20") for line in open('product/productRevised.txt')]
-	createdTime = []
-	status = []
-	assignedTo = []
-	reportedBy = []
-	monthYear = []
-	Year = []
-	month = []
-	assignedTo = []
-	reportedBy = []
-	platforms = []
-	for eachProduct in redHatProductsList:
-		print eachProduct + ' request Started'
-		filepath = 'product/data/'+eachProduct+'.json'
-		with open(filepath) as json_file:
-			data = json.load(json_file)
-		print eachProduct + ' Request Complete'
-		result = data["result"]["bugs"]
-		for objects in result:
-			bugDateTime = datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%d/%Y')
-			createdTime.append(bugDateTime)
-			monthYear.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%Y'))
-			Year.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%Y'))
-			status.append(objects["status"])
-			assignedTo.append(objects["assigned_to"])
-			reportedBy.append(objects["creator"])
-			assignedTo.append(objects["assigned_to"])
-			reportedBy.append(objects["creator"])
-			platforms.append(objects["platform"])
 	AssignedDict = dict(list(Counter(assignedTo).most_common()))
 	reporterDict = dict(list(Counter(reportedBy).most_common()))
 	counterData = dict(list(Counter(createdTime).items()))
@@ -138,41 +165,14 @@ def charts():
 
 @app.route('/leaderboard')
 def leaderboard():
-	redHatProductsList = [line.strip().replace(" ", "%20") for line in open('product/productRevised.txt')]
-	assignedTo = []
-	reportedBy = []
-	no_of_bugs = 0
-	for eachProduct in redHatProductsList:
-		print eachProduct + ' request Started'
-		filepath = 'product/data/'+eachProduct+'.json'
-		with open(filepath) as json_file:
-			data = json.load(json_file)
-		print eachProduct + ' Request Complete'
-		result = data["result"]["bugs"]
-		no_of_bugs += len(result)
-		for objects in result:
-			assignedTo.append(objects["assigned_to"])
-			reportedBy.append(objects["creator"])
 	AssignedList = list(Counter(assignedTo).most_common())
 	reporterList = list(Counter(reportedBy).most_common())
 	noOfAssignees = len(set(AssignedList))
 	noOfReporters = len(set(reporterList))
 	return render_template('leaderboard.djt', AssignedList=AssignedList, noOfAssignees=noOfAssignees, reporterList=reporterList, noOfReporters=noOfReporters, no_of_bugs=no_of_bugs)
 
-@app.route('/components')
-def components():
-	redHatProductsList = [line.strip().replace(" ", "%20") for line in open('product/productRevised.txt')]
-	components = []
-	for eachProduct in redHatProductsList:
-		print eachProduct + ' request Started'
-		filepath = 'product/data/'+eachProduct+'.json'
-		with open(filepath) as json_file:
-			data = json.load(json_file)
-		print eachProduct + ' Request Complete'
-		result = data["result"]["bugs"]
-		for objects in result:
-			for component in objects["component"]:
-				components.append(component)
+@app.route('/component')
+def component():
 	noOfComponents = len(list(set(components)))
 	componentList = list(Counter(components).most_common())
 	colors = ['aqua','green','blue','yellow','purple','orange','red']
@@ -180,37 +180,6 @@ def components():
 
 @app.route('/')
 def screen():
-	redHatProductsList = [line.strip().replace(" ", "%20") for line in open('product/productRevised.txt')]
-	requestURLs = []
-	assignedTo = []
-	severity = []
-	qaContacts = []
-	bugTimeline = []
-	ccList = []
-	components = []
-	bugStatus = []
-	no_of_bugs = 0
-	for eachProduct in redHatProductsList:
-		print eachProduct + ' request Started'
-		filepath = 'product/data/'+eachProduct+'.json'
-		with open(filepath) as json_file:
-			data = json.load(json_file)
-		print eachProduct + ' Request Complete'
-		result = data["result"]["bugs"]
-		no_of_bugs += len(result)
-		for objects in result:
-			assignedTo.append(objects["assigned_to"])
-			qaContacts.append(objects["qa_contact"])
-			severity.append(objects["severity"])
-			bugStatus.append(objects["status"])
-			for members in objects["cc"]:
-				ccList.append(members)
-			for component in objects["component"]:
-				components.append(component)
-			temp = []
-			temp.append(objects["id"])
-			temp.append(datetime.datetime(*map(int, re.split('[^\d]', objects["creation_time"])[:-1])))
-			bugTimeline.append(temp)
 	noOfPeopleAssigned = len(list(set(assignedTo)))
 	noOfQAContacts = len(list(set(qaContacts)))
 	severityList = list(Counter(severity).items())
@@ -223,7 +192,6 @@ def screen():
 	noOfCCParticipants = len(list(set(ccList)))
 	noOfComponents = len(list(set(components)))
 	componentList = list(Counter(components).items())
-	print componentList
 	return render_template('index.djt', noOfBugs=no_of_bugs, noOfPeopleAssigned=noOfPeopleAssigned, bugIds=bugTimeline, severityList=severityList, noOfQAContacts=noOfQAContacts, noOfRepos=noOfRepos, repoResult=repoResult, noOfCCParticipants=noOfCCParticipants, noOfComponents=noOfComponents, statusList=statusList)
 
 @app.teardown_appcontext
