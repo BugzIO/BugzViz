@@ -63,6 +63,9 @@ def charts():
 	monthYear = []
 	Year = []
 	month = []
+	assignedTo = []
+	reportedBy = []
+	platforms = []
 	for eachProduct in redHatProductsList:
 		print eachProduct + ' request Started'
 		filepath = 'product/data/'+eachProduct+'.json'
@@ -78,11 +81,18 @@ def charts():
 			status.append(objects["status"])
 			assignedTo.append(objects["assigned_to"])
 			reportedBy.append(objects["creator"])
+			assignedTo.append(objects["assigned_to"])
+			reportedBy.append(objects["creator"])
+			platforms.append(objects["platform"])
+	AssignedDict = dict(list(Counter(assignedTo).most_common()))
+	reporterDict = dict(list(Counter(reportedBy).most_common()))
 	counterData = dict(list(Counter(createdTime).items()))
 	statusCount = dict(list(Counter(status).items()))
 	monthYearCount = dict(list(Counter(monthYear).items()))
 	YearCount = dict(list(Counter(Year).items()))
+	platformDict = dict(list(Counter(platforms).items()))
 	data = []
+	# Unicode to String conversions
 	for key, value in statusCount.iteritems():
 		temp = []
 		temp.append(key.encode('ascii','ignore'))
@@ -106,7 +116,25 @@ def charts():
 		temp.append(key.encode('ascii','ignore'))
 		temp.append(value)
 		YearInfo.append(temp)
-	return render_template('chart.djt', statusData = data, timeInfo=timeInfo, monthYearInfo=monthYearInfo, YearInfo=YearInfo)
+	AssignedInfo = []
+	ReporterInfo = []
+	for key, value in AssignedDict.iteritems():
+		temp = []
+		temp.append(key.encode('ascii','ignore'))
+		temp.append(value)
+		AssignedInfo.append(temp)
+	for key, value in reporterDict.iteritems():
+		temp = []
+		temp.append(key.encode('ascii','ignore'))
+		temp.append(value)
+		ReporterInfo.append(temp)
+	platformInfo = []
+	for key, value in platformDict.iteritems():
+		temp = []
+		temp.append(key.encode('ascii','ignore'))
+		temp.append(value)
+		platformInfo.append(temp)
+	return render_template('chart.djt', statusData = data, timeInfo=timeInfo, monthYearInfo=monthYearInfo, YearInfo=YearInfo, AssignedInfo=AssignedInfo, ReporterInfo=ReporterInfo, platformInfo=platformInfo)
 
 @app.route('/leaderboard')
 def leaderboard():

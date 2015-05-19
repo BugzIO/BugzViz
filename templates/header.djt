@@ -59,18 +59,23 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active treeview">
-              <a href="#">
+              <a href="/">
                 <i class="fa fa-dashboard"></i> <span>Home</span>
               </a>
             </li>
-            <li class="active treeview">
+            <li class="treeview">
               <a href="/components">
                 <i class="fa fa-list"></i> <span>Components</span>
               </a>
             </li>
-            <li class="active treeview">
+            <li class="treeview">
               <a href="/leaderboard">
                 <i class="fa fa-line-chart"></i> <span>Leaderboard</span>
+              </a>
+            </li>
+            <li class="treeview">
+              <a href="/charts">
+                <i class="fa fa-bar-chart"></i><span> Charts</span>
               </a>
             </li>
           </ul>

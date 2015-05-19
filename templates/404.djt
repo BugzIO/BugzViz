@@ -1,4 +1,4 @@
-{% extends "header.html" %}
+{% extends "header.djt" %}
 {% block body %}
 <div class="content-wrapper" style="background-color:black;">
 	<section class="content-header">

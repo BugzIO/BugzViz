@@ -27,6 +27,22 @@
 				{% column_chart YearInfo %}
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+				<h3>Reporters</h3>
+				{% column_chart ReporterInfo with library={"title":"Reporters", "colors": ["red"]} %}
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<h3>Assigned</h3>
+				{% column_chart AssignedInfo with library={"title":"Assigned", "colors":["green"]}%}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-4">
+				<h3>Platform wise</h3>
+				{% pie_chart platformInfo %}
+			</div>
+		</div>
 	</section>
 </div>
 {% endblock %}
