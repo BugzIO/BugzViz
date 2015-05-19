@@ -42,6 +42,10 @@
 				<h3>Platform wise</h3>
 				{% pie_chart platformInfo %}
 			</div>
+			<div class="col-lg-8 col-md-8">
+				<h3>Classifications</h3>
+				{% pie_chart classificationInfo %}
+			</div>
 		</div>
 	</section>
 </div>

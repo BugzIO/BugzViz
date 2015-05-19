@@ -63,6 +63,7 @@ qaContacts = []
 bugTimeline = []
 ccList = []
 bugStatus = []
+classification = []
 
 print "Server is setting up, please wait... Querying the required information\n\n"
 for eachProduct in redHatProductsList:
@@ -97,6 +98,8 @@ for eachProduct in redHatProductsList:
 		temp.append(objects["id"])
 		temp.append(datetime.datetime(*map(int, re.split('[^\d]', objects["creation_time"])[:-1])))
 		bugTimeline.append(temp)
+		classification.append(objects["classification"])
+
 print "The server is now Online.\n You can access the server at localhost:8080"
 
 def tup2float(tup):
@@ -118,6 +121,7 @@ def charts():
 	monthYearCount = dict(list(Counter(monthYear).items()))
 	YearCount = dict(list(Counter(Year).items()))
 	platformDict = dict(list(Counter(platforms).items()))
+	classificationDict = dict(list(Counter(classification).items()))
 	data = []
 	# Unicode to String conversions
 	for key, value in statusCount.iteritems():
@@ -161,7 +165,10 @@ def charts():
 		temp.append(key.encode('ascii','ignore'))
 		temp.append(value)
 		platformInfo.append(temp)
-	return render_template('chart.djt', statusData = data, timeInfo=timeInfo, monthYearInfo=monthYearInfo, YearInfo=YearInfo, AssignedInfo=AssignedInfo, ReporterInfo=ReporterInfo, platformInfo=platformInfo)
+	classificationInfo = {}
+	for key, value in classificationDict.iteritems():
+		classificationInfo[str(key)] = value
+	return render_template('chart.djt', statusData = data, timeInfo=timeInfo, monthYearInfo=monthYearInfo, YearInfo=YearInfo, AssignedInfo=AssignedInfo, ReporterInfo=ReporterInfo, platformInfo=platformInfo, classificationInfo=classificationInfo)
 
 @app.route('/leaderboard')
 def leaderboard():
@@ -195,7 +202,7 @@ def screen():
 	return render_template('index.djt', noOfBugs=no_of_bugs, noOfPeopleAssigned=noOfPeopleAssigned, bugIds=bugTimeline, severityList=severityList, noOfQAContacts=noOfQAContacts, noOfRepos=noOfRepos, repoResult=repoResult, noOfCCParticipants=noOfCCParticipants, noOfComponents=noOfComponents, statusList=statusList)
 
 @app.teardown_appcontext
-def close_db():
+def close_db(self):
 	"""Closes the database again at the end of the request."""
 	get_cursor().close()
 
