@@ -1,0 +1,22 @@
+[
+  {
+    "login": "xsgordon",
+    "id": 692999,
+    "avatar_url": "https://avatars.githubusercontent.com/u/692999?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/xsgordon",
+    "html_url": "https://github.com/xsgordon",
+    "followers_url": "https://api.github.com/users/xsgordon/followers",
+    "following_url": "https://api.github.com/users/xsgordon/following{/other_user}",
+    "gists_url": "https://api.github.com/users/xsgordon/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/xsgordon/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/xsgordon/subscriptions",
+    "organizations_url": "https://api.github.com/users/xsgordon/orgs",
+    "repos_url": "https://api.github.com/users/xsgordon/repos",
+    "events_url": "https://api.github.com/users/xsgordon/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/xsgordon/received_events",
+    "type": "User",
+    "site_admin": false,
+    "contributions": 110
+  }
+]

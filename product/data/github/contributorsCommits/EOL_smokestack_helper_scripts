@@ -1,0 +1,22 @@
+[
+  {
+    "login": "dprince",
+    "id": 140305,
+    "avatar_url": "https://avatars.githubusercontent.com/u/140305?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dprince",
+    "html_url": "https://github.com/dprince",
+    "followers_url": "https://api.github.com/users/dprince/followers",
+    "following_url": "https://api.github.com/users/dprince/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dprince/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dprince/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dprince/subscriptions",
+    "organizations_url": "https://api.github.com/users/dprince/orgs",
+    "repos_url": "https://api.github.com/users/dprince/repos",
+    "events_url": "https://api.github.com/users/dprince/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dprince/received_events",
+    "type": "User",
+    "site_admin": false,
+    "contributions": 1
+  }
+]

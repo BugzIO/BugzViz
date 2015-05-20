@@ -1,0 +1,129 @@
+{% extends "header.djt" %}
+{% block body %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="ck/static/chartkick.js"></script>
+<div class="content-wrapper" style="background-color:white;">
+	<section class="content-header">
+	</section>
+	<section class="content">
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<h3 style="text-align:center;">Combined statistics from Gluster and Redhat Open Stack</h3>
+				{% bar_chart IndividualContributions with width = 1800 %}
+			</div>
+			<div class="col-lg-6 col-md-6" style="text-align:center;">
+				<img src="{{url_for('static', filename='images/gluster.png')}}" height="100" width="100" alt="">
+			</div>
+			<div class="col-lg-6 col-md-6" style="text-align:center;">
+				<img src="{{url_for('static', filename='images/openstack.png')}}" height="100" width="100" alt="">
+			</div>
+			<div class="col-lg-6 col-md-6">
+			</div>
+			<div class="col-lg-6 col-md-6">
+				
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<div class="info-box bg-green">
+                <span class="info-box-icon"><i class="ion ion-ios-list-outline"></i></span>
+                <div class="info-box-content">
+                  <span class="info-box-text">Total Commits Gluster</span>
+                  <h2 class="info-box-number">{{GLUSTERFSCOMMITS}}</h2>
+                </div><!-- /.info-box-content -->
+              </div>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<div class="info-box bg-red">
+                <span class="info-box-icon"><i class="ion ion-ios-list-outline"></i></span>
+                <div class="info-box-content">
+                  <span class="info-box-text">Total Commits Redhat Open Stack</span>
+                  <h2 class="info-box-number">{{OPENSTACKCOMMITS}}</h2>
+                </div><!-- /.info-box-content -->
+              </div>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<h3>Repositories visualization</h3>
+				{% pie_chart glusterfsContributions %}
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<h3>Repositories visualization</h3>
+				{% pie_chart openstackContributions %}
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<h3>Programming Languages</h3>
+				{% pie_chart glusterfslanguageInfo %}
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<h3>Programming Languages</h3>
+				{% pie_chart openstacklanguageInfo %}
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<div class="box box-success">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Members working on Gluster</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body no-padding">
+                  <ul class="users-list clearfix">
+                  	{% for members in MemberInfo%}
+                    <li>
+                      <img src="{{members[1]}}" alt="{{members[0]}}" height="100" width="100">
+                      <a class="users-list-name" href="#">{{members[0]}}</a>
+                    </li>
+                    {% endfor %}
+                  </ul><!-- /.users-list -->
+                </div><!-- /.box-body -->
+              </div>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<div class="box box-danger">
+					<div class="box-header with-border">
+						<h3 class="box-title">Members working on Redhat open stack</h3>
+					</div>
+					<div class="box-body no-padding">
+						<ul class="users-list clearfix">
+							{% for members in OpenStackMemberInfo %}
+							<li>
+								<img src="{{members[1]}}" alt="{{members[0]}}" height="100" width="100">
+								<a href="#" class="users-list-name">{{members[0]}}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+				{% for key, value in glusterfsContributions.items() recursive%}
+				<div class="col-lg-6">
+					<div class="small-box bg-green">
+						<div class="inner">
+							<h3>{{value}}</h3>
+							<p>{{key}}</p>
+						</div>
+						<div class="icon">
+							<i class="ion ion-code"></i>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-md-6">
+				{% for key, value in openstackContributions.items() recursive%}
+				<div class="col-lg-6">
+					<div class="small-box bg-red">
+						<div class="inner">
+							<h3>{{value}}</h3>
+							<p>{{key}}</p>
+						</div>
+						<div class="icon">
+							<i class="ion ion-code"></i>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+</div>
+{% endblock %}

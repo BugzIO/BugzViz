@@ -1,0 +1,22 @@
+[
+  {
+    "login": "justinclift",
+    "id": 406299,
+    "avatar_url": "https://avatars.githubusercontent.com/u/406299?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/justinclift",
+    "html_url": "https://github.com/justinclift",
+    "followers_url": "https://api.github.com/users/justinclift/followers",
+    "following_url": "https://api.github.com/users/justinclift/following{/other_user}",
+    "gists_url": "https://api.github.com/users/justinclift/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/justinclift/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/justinclift/subscriptions",
+    "organizations_url": "https://api.github.com/users/justinclift/orgs",
+    "repos_url": "https://api.github.com/users/justinclift/repos",
+    "events_url": "https://api.github.com/users/justinclift/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/justinclift/received_events",
+    "type": "User",
+    "site_admin": false,
+    "contributions": 62
+  }
+]

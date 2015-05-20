@@ -1,0 +1,42 @@
+[
+  {
+    "login": "childsb",
+    "id": 722782,
+    "avatar_url": "https://avatars.githubusercontent.com/u/722782?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/childsb",
+    "html_url": "https://github.com/childsb",
+    "followers_url": "https://api.github.com/users/childsb/followers",
+    "following_url": "https://api.github.com/users/childsb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/childsb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/childsb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/childsb/subscriptions",
+    "organizations_url": "https://api.github.com/users/childsb/orgs",
+    "repos_url": "https://api.github.com/users/childsb/repos",
+    "events_url": "https://api.github.com/users/childsb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/childsb/received_events",
+    "type": "User",
+    "site_admin": false,
+    "contributions": 34
+  },
+  {
+    "login": "avati",
+    "id": 620601,
+    "avatar_url": "https://avatars.githubusercontent.com/u/620601?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/avati",
+    "html_url": "https://github.com/avati",
+    "followers_url": "https://api.github.com/users/avati/followers",
+    "following_url": "https://api.github.com/users/avati/following{/other_user}",
+    "gists_url": "https://api.github.com/users/avati/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/avati/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/avati/subscriptions",
+    "organizations_url": "https://api.github.com/users/avati/orgs",
+    "repos_url": "https://api.github.com/users/avati/repos",
+    "events_url": "https://api.github.com/users/avati/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/avati/received_events",
+    "type": "User",
+    "site_admin": false,
+    "contributions": 16
+  }
+]

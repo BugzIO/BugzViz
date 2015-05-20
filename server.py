@@ -4,7 +4,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
 		render_template, flash, Blueprint
 from flaskext.mysql import MySQL
 from flask_mail import Mail,Message
-from config import config, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
+from config import config, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD, AUTH_TOKEN
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
 import datetime, json
@@ -65,40 +65,58 @@ ccList = []
 bugStatus = []
 classification = []
 
-print "Server is setting up, please wait... Querying the required information\n\n"
-for eachProduct in redHatProductsList:
-	print eachProduct + ' request Started'
-	filepath = 'product/data/'+eachProduct+'.json'
-	with open(filepath) as json_file:
-		data = json.load(json_file)
-	print eachProduct + ' Request Complete'
-	result = data["result"]["bugs"]
-	no_of_bugs += len(result)
-	for objects in result:
-		bugDateTime = datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%d/%Y')
-		createdTime.append(bugDateTime)
-		monthYear.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%Y'))
-		Year.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%Y'))
-		status.append(objects["status"])
-		assignedTo.append(objects["assigned_to"])
-		reportedBy.append(objects["creator"])
-		assignedTo.append(objects["assigned_to"])
-		reportedBy.append(objects["creator"])
-		platforms.append(objects["platform"])
-		for component in objects["component"]:
-			components.append(component)
-		qaContacts.append(objects["qa_contact"])
-		severity.append(objects["severity"])
-		bugStatus.append(objects["status"])
-		for members in objects["cc"]:
-			ccList.append(members)
-		for component in objects["component"]:
-			components.append(component)
-		temp = []
-		temp.append(objects["id"])
-		temp.append(datetime.datetime(*map(int, re.split('[^\d]', objects["creation_time"])[:-1])))
-		bugTimeline.append(temp)
-		classification.append(objects["classification"])
+# External Folders path
+
+CONTRIBUTORS_PATH = 'product/data/github/contributorsCommits'
+LANGUAGES_PATH = 'product/data/github/languages'
+GITHUB_PATH = 'product/data/github'
+
+GLUSTER_REPOS = GITHUB_PATH+'/glusterrepos.json'
+GLUSTER_MEMBERS = GITHUB_PATH+'/glustermembers.json'
+OPENSTACK_REPOS = GITHUB_PATH+'/openstackrepos.json'
+OPENSTACK_MEMBERS = GITHUB_PATH+'/openstackmembers.json'
+
+contributorFiles = os.listdir(CONTRIBUTORS_PATH)
+languageFiles = os.listdir(LANGUAGES_PATH)
+
+pprint(contributorFiles)
+pprint(languageFiles)
+## Files list loaded
+
+# print "Server is setting up, please wait... Querying the required information\n\n"
+# for eachProduct in redHatProductsList:
+# 	print eachProduct + ' request Started'
+# 	filepath = 'product/data/'+eachProduct+'.json'
+# 	with open(filepath) as json_file:
+# 		data = json.load(json_file)
+# 	print eachProduct + ' Request Complete'
+# 	result = data["result"]["bugs"]
+# 	no_of_bugs += len(result)
+# 	for objects in result:
+# 		bugDateTime = datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%d/%Y')
+# 		createdTime.append(bugDateTime)
+# 		monthYear.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%Y'))
+# 		Year.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%Y'))
+# 		status.append(objects["status"])
+# 		assignedTo.append(objects["assigned_to"])
+# 		reportedBy.append(objects["creator"])
+# 		assignedTo.append(objects["assigned_to"])
+# 		reportedBy.append(objects["creator"])
+# 		platforms.append(objects["platform"])
+# 		for component in objects["component"]:
+# 			components.append(component)
+# 		qaContacts.append(objects["qa_contact"])
+# 		severity.append(objects["severity"])
+# 		bugStatus.append(objects["status"])
+# 		for members in objects["cc"]:
+# 			ccList.append(members)
+# 		for component in objects["component"]:
+# 			components.append(component)
+# 		temp = []
+# 		temp.append(objects["id"])
+# 		temp.append(datetime.datetime(*map(int, re.split('[^\d]', objects["creation_time"])[:-1])))
+# 		bugTimeline.append(temp)
+# 		classification.append(objects["classification"])
 
 print "The server is now Online.\n You can access the server at localhost:8080"
 
@@ -111,6 +129,109 @@ def get_cursor():
 @app.errorhandler(404)
 def page_not_found(e):
 	return render_template('404.djt'), 404
+
+@app.route('/github')
+def github():
+	IndividualContributions = {}
+	repoWiseContributions = {}
+	with open(GLUSTER_REPOS) as gluster_data:
+		data = json.load(gluster_data)
+	with open(OPENSTACK_REPOS) as open_stack_data:
+		openstack_data = json.load(open_stack_data)
+	with open(GLUSTER_MEMBERS) as gluster_members:
+		memberData = json.load(gluster_members)
+	with open(OPENSTACK_MEMBERS) as openstack_members:
+		openstackmemberData = json.load(openstack_members)
+	for dataFile in contributorFiles:
+		filename = CONTRIBUTORS_PATH+'/'+dataFile
+		noOfCommits = 0
+		with open(filename) as contribData:
+			contributions = json.load(contribData)
+		for objects in contributions:
+			noOfCommits += objects["contributions"]
+			IndividualContributions[str(objects["login"])] = objects["contributions"]
+		repoWiseContributions[str(dataFile)] = noOfCommits
+
+	# Need to filter these from repoWise Contributions
+	OPENSTACKREPOLIST = []
+	GLUSTERFSREPOLIST = []
+	for objects in openstack_data:
+		OPENSTACKREPOLIST.append(objects["name"])
+	for objects in data:
+		GLUSTERFSREPOLIST.append(objects["name"])
+	openstackContributions = {}
+	glusterfsContributions = {}
+	openstacklanguageInfo = {}
+	glusterfslanguageInfo = {}
+	OPENSTACKCOMMITS = 0
+	GLUSTERFSCOMMITS = 0
+	# openStack and gluster repos present at openstack_data and data
+	for key, value in repoWiseContributions.iteritems():
+		if key in OPENSTACKREPOLIST:
+			openstackContributions[str(key)] = value
+			OPENSTACKCOMMITS += value
+		else:
+			glusterfsContributions[str(key)] = value
+			GLUSTERFSCOMMITS += value
+
+	for dataFile in OPENSTACKREPOLIST:
+		filename = LANGUAGES_PATH+'/'+dataFile
+		with open(filename) as json_data:
+			languageData = json.load(json_data)
+		for key, value in languageData.iteritems():
+			if key in openstacklanguageInfo:
+				val = openstacklanguageInfo[key]
+				newval = val + value
+				openstacklanguageInfo[str(key)] = newval
+			else:
+				openstacklanguageInfo[str(key)] = value
+
+	for dataFile in GLUSTERFSREPOLIST:
+		filename = LANGUAGES_PATH+'/'+dataFile
+		with open(filename) as json_data:
+			languageData = json.load(json_data)
+		for key, value in languageData.iteritems():
+			if key in glusterfslanguageInfo:
+				val = glusterfslanguageInfo[key]
+				newval = val + value
+				glusterfslanguageInfo[str(key)] = newval
+			else:
+				glusterfslanguageInfo[str(key)] = value
+
+	pprint(glusterfslanguageInfo)
+	pprint(openstacklanguageInfo)
+
+	NoOfRepos = len(data)
+	NoOfMembers = len(memberData)
+	MemberInfo = []
+	OpenStackMemberInfo = []
+	forks = []
+	for objects in data:
+		forks.append(objects["fork"])
+	for objects in memberData:
+		temp = []
+		temp.append(objects["login"])
+		temp.append(objects["avatar_url"])
+		MemberInfo.append(temp)
+	for objects in openstackmemberData:
+		temp = []
+		temp.append(objects["login"])
+		temp.append(objects["avatar_url"])
+		OpenStackMemberInfo.append(temp)
+	forkDict = dict(list(Counter(forks).items()))
+	forkInfo = {}
+	for key, value in forkDict.iteritems():
+		forkInfo[str(key)] = value
+	return render_template('github.djt', forkInfo=forkInfo, MemberInfo=MemberInfo, OpenStackMemberInfo=OpenStackMemberInfo, OPENSTACKCOMMITS=OPENSTACKCOMMITS, NoOfRepos=NoOfRepos, repoWiseContributions=repoWiseContributions, IndividualContributions=IndividualContributions, openstackContributions=openstackContributions, glusterfsContributions=glusterfsContributions, GLUSTERFSCOMMITS=GLUSTERFSCOMMITS, openstacklanguageInfo=openstacklanguageInfo, glusterfslanguageInfo=glusterfslanguageInfo)
+
+@app.route('/users/<username>')
+def users(username=None):
+	AssignedDict = dict(list(Counter(assignedTo).most_common()))
+	reporterDict = dict(list(Counter(reportedBy).most_common()))
+	ccListDict = dict(list(Counter()))
+	a = AssignedDict[username]
+	b = reporterDict[username]
+	return render_template('user.djt', user=username)
 
 @app.route('/charts')
 def charts():
