@@ -64,6 +64,8 @@ bugTimeline = []
 ccList = []
 bugStatus = []
 classification = []
+BugStatusMap = []
+severityMap = []
 
 # External Folders path
 
@@ -116,7 +118,20 @@ for eachProduct in redHatProductsList:
 		temp.append(objects["id"])
 		temp.append(datetime.datetime(*map(int, re.split('[^\d]', objects["creation_time"])[:-1])))
 		bugTimeline.append(temp)
+		Mapper = []
+		Mapper.append(objects["id"])
+		Mapper.append(objects["creator"])
+		Mapper.append(objects["creation_time"])
+		Mapper.append(objects["product"])
+		Mapper.append(objects["component"])
+		Mapper.append(objects["severity"])
+		Mapper.append(objects["status"])
+		BugStatusMap.append(Mapper)
 		classification.append(objects["classification"])
+
+# Filters
+## BugStatusMap => Has the status of all the bugs
+## Contains severity and status
 
 print "The server is now Online.\n You can access the server at localhost:8080"
 
@@ -129,6 +144,54 @@ def get_cursor():
 @app.errorhandler(404)
 def page_not_found(e):
 	return render_template('404.djt'), 404
+
+@app.route('/status/<status>')
+def statusfunc(status=None):
+	param = status
+	statusRelated = []
+	severityStatusRelated = []
+	componentStatusRelated = []
+	productStatusRelated = []
+	creatorStatusRelated = []
+	severityInfo = {}
+	componentInfo = {}
+	productInfo = {}
+	creatorInfo = {}
+	for bugObject in BugStatusMap:
+		if bugObject[6] == param:
+			statusRelated.append(bugObject)
+			severityStatusRelated.append(bugObject[5])
+			for component in bugObject[4]:
+				componentStatusRelated.append(component)
+			productStatusRelated.append(bugObject[3])
+			creatorStatusRelated.append(bugObject[1])
+	pprint(statusRelated)
+	severityCounter = dict(list(Counter(severityStatusRelated).items()))
+	componentCounter = dict(list(Counter(componentStatusRelated).items()))
+	productCounter = dict(list(Counter(productStatusRelated).items()))
+	creatorCounter = dict(list(Counter(creatorStatusRelated).items()))
+	for key, value in severityCounter.iteritems():
+		severityInfo[str(key)] = value
+	for key, value in componentCounter.iteritems():
+		componentInfo[str(key)] = value
+	for key, value in productCounter.iteritems():
+		productInfo[str(key)] = value
+	for key, value in creatorCounter.iteritems():
+		creatorInfo[key.encode('ascii','ignore')] = value
+	severityInfoList = [ [k,v] for k,v in severityInfo.items() ]
+	componentInfoList = [ [k,v] for k,v in componentInfo.items() ]
+	productInfoList = [ [k,v] for k,v in productInfo.items() ]
+	creatorInfoList = [ [k,v] for k,v in creatorInfo.items() ]
+	pprint(severityInfoList)
+	pprint(componentInfoList)
+	pprint(productInfoList)
+	pprint(creatorInfoList)
+	data = [['high', 11], ['urgent', 4], ['medium', 30], ['low', 10], ['unspecified', 13]]
+	return render_template('status.djt',creatorInfoList=creatorInfoList,productInfo=productInfo,componentInfo=componentInfo,severityInfo=severityInfo, status=status)
+
+@app.route('/severity/<severity>')
+def severityfunc(severity=None):
+	return render_template('severity.djt')
 
 @app.route('/github')
 def github():
@@ -222,6 +285,7 @@ def github():
 	forkInfo = {}
 	for key, value in forkDict.iteritems():
 		forkInfo[str(key)] = value
+	pprint(forkInfo)
 	return render_template('github.djt', forkInfo=forkInfo, MemberInfo=MemberInfo, OpenStackMemberInfo=OpenStackMemberInfo, OPENSTACKCOMMITS=OPENSTACKCOMMITS, NoOfRepos=NoOfRepos, repoWiseContributions=repoWiseContributions, IndividualContributions=IndividualContributions, openstackContributions=openstackContributions, glusterfsContributions=glusterfsContributions, GLUSTERFSCOMMITS=GLUSTERFSCOMMITS, openstacklanguageInfo=openstacklanguageInfo, glusterfslanguageInfo=glusterfslanguageInfo)
 
 @app.route('/users/<username>')

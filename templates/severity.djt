@@ -1,0 +1,14 @@
+{% extends "header.djt" %}
+{% block body %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="ck/static/chartkick.js"></script>
+<div class="content-wrapper" style="background-color:white;">
+	<section class="content-header">
+	</section>
+	<section class="content">
+		<div class="row">
+		</div>
+	</section>
+</div>
+{% endblock %}
