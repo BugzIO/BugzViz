@@ -83,40 +83,40 @@ pprint(contributorFiles)
 pprint(languageFiles)
 ## Files list loaded
 
-# print "Server is setting up, please wait... Querying the required information\n\n"
-# for eachProduct in redHatProductsList:
-# 	print eachProduct + ' request Started'
-# 	filepath = 'product/data/'+eachProduct+'.json'
-# 	with open(filepath) as json_file:
-# 		data = json.load(json_file)
-# 	print eachProduct + ' Request Complete'
-# 	result = data["result"]["bugs"]
-# 	no_of_bugs += len(result)
-# 	for objects in result:
-# 		bugDateTime = datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%d/%Y')
-# 		createdTime.append(bugDateTime)
-# 		monthYear.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%Y'))
-# 		Year.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%Y'))
-# 		status.append(objects["status"])
-# 		assignedTo.append(objects["assigned_to"])
-# 		reportedBy.append(objects["creator"])
-# 		assignedTo.append(objects["assigned_to"])
-# 		reportedBy.append(objects["creator"])
-# 		platforms.append(objects["platform"])
-# 		for component in objects["component"]:
-# 			components.append(component)
-# 		qaContacts.append(objects["qa_contact"])
-# 		severity.append(objects["severity"])
-# 		bugStatus.append(objects["status"])
-# 		for members in objects["cc"]:
-# 			ccList.append(members)
-# 		for component in objects["component"]:
-# 			components.append(component)
-# 		temp = []
-# 		temp.append(objects["id"])
-# 		temp.append(datetime.datetime(*map(int, re.split('[^\d]', objects["creation_time"])[:-1])))
-# 		bugTimeline.append(temp)
-# 		classification.append(objects["classification"])
+print "Server is setting up, please wait... Querying the required information\n\n"
+for eachProduct in redHatProductsList:
+	print eachProduct + ' request Started'
+	filepath = 'product/data/'+eachProduct+'.json'
+	with open(filepath) as json_file:
+		data = json.load(json_file)
+	print eachProduct + ' Request Complete'
+	result = data["result"]["bugs"]
+	no_of_bugs += len(result)
+	for objects in result:
+		bugDateTime = datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%d/%Y')
+		createdTime.append(bugDateTime)
+		monthYear.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%m/%Y'))
+		Year.append(datetime.datetime.strptime(objects["creation_time"], '%Y-%m-%dT%H:%M:%SZ').date().strftime('%Y'))
+		status.append(objects["status"])
+		assignedTo.append(objects["assigned_to"])
+		reportedBy.append(objects["creator"])
+		assignedTo.append(objects["assigned_to"])
+		reportedBy.append(objects["creator"])
+		platforms.append(objects["platform"])
+		for component in objects["component"]:
+			components.append(component)
+		qaContacts.append(objects["qa_contact"])
+		severity.append(objects["severity"])
+		bugStatus.append(objects["status"])
+		for members in objects["cc"]:
+			ccList.append(members)
+		for component in objects["component"]:
+			components.append(component)
+		temp = []
+		temp.append(objects["id"])
+		temp.append(datetime.datetime(*map(int, re.split('[^\d]', objects["creation_time"])[:-1])))
+		bugTimeline.append(temp)
+		classification.append(objects["classification"])
 
 print "The server is now Online.\n You can access the server at localhost:8080"
 
