@@ -218,6 +218,41 @@ def severityfunc(severity=None):
 		creatorInfo[key.encode('ascii','ignore')] = value
 	return render_template('severity.djt', statusInfo=statusInfo, componentInfo=componentInfo, productInfo=productInfo, creatorInfo=creatorInfo, severity=severity)
 
+@app.route('/products/<product>')
+def productsfunc(product=None):
+	param = product
+	productRelated = []
+	statusRelated = []
+	componentRelated = []
+	severityRelated = []
+	creatorRelated = []
+	statusInfo = {}
+	componentInfo = {}
+	severityInfo = {}
+	creatorInfo = {}
+	for bugObject in BugStatusMap:
+		if bugObject[3] == param:
+			productRelated.append(bugObject)
+			statusRelated.append(bugObject[6])
+			severityRelated.append(bugObject[5])
+			creatorRelated.append(bugObject[1])
+			for component in bugObject[4]:
+				componentRelated.append(component)
+	statusCounter = dict(list(Counter(statusRelated).items()))
+	componentCounter = dict(list(Counter(componentRelated).items()))
+	severityCounter = dict(list(Counter(severityRelated).items()))
+	creatorCounter = dict(list(Counter(creatorRelated).items()))
+	for key, value in statusCounter.iteritems():
+		statusInfo[key.encode('ascii','ignore')] = value
+	for key, value in componentCounter.iteritems():
+		componentInfo[key.encode('ascii','ignore')] = value
+	for key, value in severityCounter.iteritems():
+		severityInfo[key.encode('ascii','ignore')] = value
+	for key, value in creatorCounter.iteritems():
+		creatorInfo[key.encode('ascii','ignore')] = value
+	return render_template('product.djt', statusInfo=statusInfo, componentInfo=componentInfo, severityInfo=severityInfo, creatorInfo=creatorInfo, product=product)
+
+
 @app.route('/github')
 def github():
 	IndividualContributions = {}
