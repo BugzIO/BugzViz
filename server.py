@@ -182,16 +182,41 @@ def statusfunc(status=None):
 	componentInfoList = [ [k,v] for k,v in componentInfo.items() ]
 	productInfoList = [ [k,v] for k,v in productInfo.items() ]
 	creatorInfoList = [ [k,v] for k,v in creatorInfo.items() ]
-	pprint(severityInfoList)
-	pprint(componentInfoList)
-	pprint(productInfoList)
-	pprint(creatorInfoList)
-	data = [['high', 11], ['urgent', 4], ['medium', 30], ['low', 10], ['unspecified', 13]]
 	return render_template('status.djt',creatorInfoList=creatorInfoList,productInfo=productInfo,componentInfo=componentInfo,severityInfo=severityInfo, status=status)
 
 @app.route('/severity/<severity>')
 def severityfunc(severity=None):
-	return render_template('severity.djt')
+	param = severity
+	severityRelated = []
+	statusRelated = []
+	componentRelated = []
+	productRelated = []
+	creatorRelated = []
+	statusInfo = {}
+	componentInfo = {}
+	productInfo = {}
+	creatorInfo = {}
+	for bugObject in BugStatusMap:
+		if bugObject[5] == param:
+			severityRelated.append(bugObject)
+			statusRelated.append(bugObject[6])
+			for component in bugObject[4]:
+				componentRelated.append(component)
+			productRelated.append(bugObject[3])
+			creatorRelated.append(bugObject[1])
+	statusCounter = dict(list(Counter(statusRelated).items()))
+	componentCounter = dict(list(Counter(componentRelated).items()))
+	productCounter = dict(list(Counter(productRelated).items()))
+	creatorCounter = dict(list(Counter(componentRelated).items()))
+	for key, value in statusCounter.iteritems():
+		statusInfo[key.encode('ascii','ignore')] = value
+	for key, value in componentCounter.iteritems():
+		componentInfo[key.encode('ascii','ignore')] = value
+	for key, value in productCounter.iteritems():
+		productInfo[key.encode('ascii','ignore')] = value
+	for key, value in creatorCounter.iteritems():
+		creatorInfo[key.encode('ascii','ignore')] = value
+	return render_template('severity.djt', statusInfo=statusInfo, componentInfo=componentInfo, productInfo=productInfo, creatorInfo=creatorInfo, severity=severity)
 
 @app.route('/github')
 def github():
