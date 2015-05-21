@@ -20,3 +20,6 @@ MAIL_PASSWORD = None
 
 # Administrator List
 ADMINS = ['you@example.com']
+
+# Github
+AUTH_TOKEN = ''
