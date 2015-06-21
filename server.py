@@ -14,6 +14,7 @@ import re, datetime
 import urllib2, urllib
 from bs4 import BeautifulSoup
 import requests, chartkick
+from flask.ext.pymongo import PyMongo
  
 import logging
 from logging.handlers import SMTPHandler
@@ -23,6 +24,7 @@ mysql = MySQL()
 # create our little application :)
 
 app = Flask(__name__)
+mongo = PyMongo(app)
 
 for key in config:
 	app.config[key] = config[key]
@@ -144,6 +146,80 @@ def get_cursor():
 @app.errorhandler(404)
 def page_not_found(e):
 	return render_template('404.djt'), 404
+
+@app.route('/query', methods = ['GET', 'POST'])
+def query():
+	if request.method == 'POST':
+		repo = request.form['repo']
+		status = request.form['status']
+		severity = request.form['severity']
+		component = request.form['component']
+
+		postRepoFilter = []
+		for bug in BugStatusMap:
+			# Repo filter first
+			if bug[3] == repo:
+				postRepoFilter.append(bug)
+		# Bugs filtered by repo
+		postStatusFilter = []
+		if status != "":
+			for bug in postRepoFilter:
+				if bug[6] == status:
+					postStatusFilter.append(bug)
+		else:
+			postStatusFilter = postRepoFilter
+
+		postSeverityFilter = []
+		if severity != "":
+			for bug in postStatusFilter:
+				if bug[5] == severity:
+					postSeverityFilter.append(bug)
+		else:
+			postSeverityFilter = postStatusFilter
+
+		postComponentFilter = []
+		if component != "":
+			for bug in postSeverityFilter:
+				for components in bug[4]:
+					if components == component:
+						postComponentFilter.append(bug)
+		else:
+			postComponentFilter = postSeverityFilter
+
+		finalResult = postComponentFilter
+		pprint(finalResult)
+		noOfBugsResult = len(finalResult)
+		noOfPeople = []
+		noOfSeverity = []
+		noOfComponents = []
+		noOfBugStatus = []
+		for bug in finalResult:
+			noOfPeople.append(bug[1])
+			noOfSeverity.append(bug[5])
+			for componentValues in bug[4]:
+				noOfComponents.append(componentValues)
+			noOfBugStatus.append(bug[6])
+		pprint(noOfPeople)
+		PeopleCounter = dict(list(Counter(noOfPeople).items()))
+		severityCounter = dict(list(Counter(noOfSeverity).items()))
+		componentCounter = dict(list(Counter(noOfComponents).items()))
+		bugStatusCounter = dict(list(Counter(noOfBugStatus).items()))
+		peopleDict = {}
+		severityDict = {}
+		componentDict = {}
+		bugStatusDict = {}
+		pprint(PeopleCounter)
+		for key, value in PeopleCounter.iteritems():
+			peopleDict[key.encode('ascii','ignore')] = value
+		for key, value in severityCounter.iteritems():
+			severityDict[str(key)] = value
+		for key, value in componentCounter.iteritems():
+			componentDict[str(key)] = value
+		for key, value in bugStatusCounter.iteritems():
+			bugStatusDict[str(key)] = value
+		pprint(peopleDict)
+		return render_template('report.djt', finalResult=finalResult, noOfBugsResult=noOfBugsResult, peopleDict=peopleDict, severityDict=severityDict, componentDict=componentDict, bugStatusDict=bugStatusDict)
+	return render_template('custom.djt', redHatProductsList=redHatProductsList )
 
 @app.route('/status/<status>')
 def statusfunc(status=None):
