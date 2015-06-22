@@ -16,7 +16,52 @@
 	</section>
 	<section class="content">
     <div class="row">
-  		
+       <div class="col-lg-3">
+        <div class="small-box bg-green">
+          <div class="inner">
+            <h3>{{noOfBugsResult}}</h3>
+            <p>Total Bugs</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-bug"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="small-box bg-green">
+          <div class="inner">
+            <h3>{{componentDict | length}}</h3>
+            <p>Total components</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-briefcase"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="small-box bg-green">
+          <div class="inner">
+            <h3>{{severityDict | length}}</h3>
+            <p>Total Bugs with severity</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-stats-bars"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="small-box bg-green">
+          <div class="inner">
+            <h3>{{peopleDict | length}}</h3>
+            <p>People Involved</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-android-contacts"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-12 col-lg-12">
         <div class="row">
           <div class="col-md-4 col-lg-4">
